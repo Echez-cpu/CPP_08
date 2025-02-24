@@ -38,7 +38,7 @@ int main() {
 
     try {
         std::list<int>::iterator it = easyfind(lst, 15);
-        std::cout << GREEN << "Found in list: " << *it << RESET << std::endl;
+        std::cout << L << "Found in list: " << *it << RESET << std::endl;
     } catch (const NoValueException &e) {
         std::cout << e.what() << std::endl;
     }
