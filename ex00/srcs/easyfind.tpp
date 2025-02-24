@@ -1,7 +1,7 @@
 template <typename T>
-typename T::iterator easyfind(T  &container, int value) {
-    typename T::iterator it = std::find(container.begin(), container.end(), value);
-    if (it == container.end()) {
+typename T::iterator easyfind(T  &arr, int value) {
+    typename T::iterator it = std::find(arr.begin(), arr.end(), value);
+    if (it == arr.end()) {
         throw NoValueException();
 }
     return it;
