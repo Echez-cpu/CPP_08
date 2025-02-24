@@ -27,7 +27,7 @@ int main() {
         std::vector<int>::iterator it = easyfind(vec, 100);
         std::cout << "Found in vector: " << *it << std::endl;
     } catch (const NoValueException &e) {
-        std::cout << e.what() << std::endl;
+        std::cout << RED << e.what() << std::endl;
     }
 
     std::list<int> lst;
@@ -38,16 +38,16 @@ int main() {
 
     try {
         std::list<int>::iterator it = easyfind(lst, 15);
-        std::cout << "Found in list: " << *it << std::endl;
+        std::cout << GREEN << "Found in list: " << *it << RESET << std::endl;
     } catch (const NoValueException &e) {
         std::cout << e.what() << std::endl;
     }
 
     try {
         std::list<int>::iterator it = easyfind(lst, 100);
-        std::cout << "Found in list: " << *it << std::endl;
+        std::cout << L << "Found in list: " << *it << RESET << std::endl;
     } catch (const NoValueException &e) {
-        std::cout << e.what() << std::endl;
+        std::cout << RED << e.what() << RESET << std::endl;
     }
 
     return 0;
