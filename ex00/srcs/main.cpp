@@ -1,4 +1,12 @@
 #include "easyfind.hpp"
+#define RESET   "\033[0m"
+#define GREEN   "\033[32m"
+#define RED     "\033[31m"
+#define Y     "\033[32m"
+#define L     "\033[33m"
+
+
+
 
 int main() {
     std::vector<int> vec;
