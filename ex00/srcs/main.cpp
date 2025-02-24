@@ -18,9 +18,9 @@ int main() {
 
     try {
         std::vector<int>::iterator it = easyfind(vec, 30);
-        std::cout << "Found in vector: " << *it << std::endl;
+        std::cout << Y << "Found in vector: " << *it << RESET << std::endl;
     } catch (const NoValueException &e) {
-        std::cout << e.what() << std::endl;
+        std::cout << RED << e.what() << RESET << std::endl;
     }
 
     try {
