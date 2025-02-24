@@ -2,8 +2,8 @@
 #define RESET   "\033[0m"
 #define GREEN   "\033[32m"
 #define RED     "\033[31m"
-#define Y     "\033[32m"
-#define L     "\033[33m"
+#define Y     "\033[33m"
+#define L     "\033[34m"
 
 
 
