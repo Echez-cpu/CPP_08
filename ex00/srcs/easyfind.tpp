@@ -6,3 +6,8 @@ typename T::iterator easyfind(T  &container, int value) {
 }
     return it;
 }
+
+
+const char *	NoValueException::what() const throw() {
+	return "No occurrence found in the container.";
+}
