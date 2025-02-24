@@ -14,6 +14,8 @@ class NoValueException : public std::exception {
 };
 
 template<typename T>
-int	easyfind(T const & arr, int value);
+typename T::iterator easyfind(T const &arr, int value);
+
+#include "../srcs/easyfind.tpp"
 
 #endif
