@@ -28,7 +28,7 @@ class Span {
 
 
 		template <typename InputIterator>
-        	void addRange(InputIterator begin, InputIterator end);
+        	void addNumber_2(InputIterator begin, InputIterator end);
 
 		class MaxNumbersException : public std::exception {
 			public:
