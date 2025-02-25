@@ -26,6 +26,10 @@ class Span {
 		int		shortestSpan() const;
 		int		longestSpan() const;
 
+
+		template <typename InputIterator>
+        	void addRange(InputIterator begin, InputIterator end);
+
 		class MaxNumbersException : public std::exception {
 			public:
 				virtual const char *	what() const throw();
