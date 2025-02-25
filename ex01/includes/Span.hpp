@@ -46,6 +46,6 @@ class Span {
 
 };
 
-#include "../srcs/Scan.tpp"
+#include "../srcs/Span.tpp"
 
 #endif
