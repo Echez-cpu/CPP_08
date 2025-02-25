@@ -64,7 +64,7 @@ int main() {
         std::srand(std::time(NULL));
         
         for (int i = 0; i < 10000; i++) {
-            bigVec.push_back(std::rand() % 100000);
+            bigVec.push_back(std::rand() % 100000 + 1);
         }
         
         largeSpan.addRange(bigVec.begin(), bigVec.end());
