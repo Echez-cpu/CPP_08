@@ -17,6 +17,8 @@ return 0;
 int main() {
     std::cout << "===== Basic Tests =====" << std::endl;
     try {
+    std::srand(std::time(NULL));
+        
         Span sp(6000);
 
         sp.bigSpan(5000);        
