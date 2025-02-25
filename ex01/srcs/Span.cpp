@@ -69,9 +69,6 @@ int 	Span::shortestSpan() {
 	return min;
 }
 
-
-
-
 int 		Span::longestSpan() const {
 	if (this->input_array.size() < 2)
 		throw Span::NotEnoughNumbersException();
