@@ -30,14 +30,11 @@ class Span {
 			public:
 				virtual const char *	what() const throw();
 		};
-		class NoNumberException : public std::exception {
+		class NotEnoughNumbersException: public std::exception {
 			public:
 				virtual const char *	what() const throw();
 		};
-		class OneNumberException : public std::exception {
-			public:
-				virtual const char *	what() const throw();
-		};
+
 	private:
 		std::vector<int>	input_array;
 		unsigned int		input_maxSize;
