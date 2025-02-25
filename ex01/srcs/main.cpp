@@ -18,6 +18,8 @@ int main() {
     std::cout << "===== Basic Tests =====" << std::endl;
     try {
         Span sp(5);
+
+        // array.bigSpan(10000);        
         sp.addNumber(6);
         sp.addNumber(3);
         sp.addNumber(17);
