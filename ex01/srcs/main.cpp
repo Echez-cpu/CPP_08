@@ -67,7 +67,7 @@ int main() {
             bigVec.push_back(std::rand());
         }
         
-        largeSpan.addRange(bigVec.begin(), bigVec.end());
+        largeSpan.addNumber_2(bigVec.begin(), bigVec.end());
         std::cout << "Shortest Span: " << largeSpan.shortestSpan() << std::endl;
         std::cout << "Longest Span: " << largeSpan.longestSpan() << std::endl;
     } catch (const std::exception &e) {
