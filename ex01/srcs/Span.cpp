@@ -46,7 +46,7 @@ void Span::bigSpan(int n) {
 
 
 
-int 	Span::shortestSpan() {
+int 	Span::shortestSpan() const {
 	
 	if (input_array.size() <  2)
 		throw Span::NotEnoughNumbersException();
@@ -57,7 +57,7 @@ int 	Span::shortestSpan() {
 
 	int min = 	__INT_MAX__;
 	std::vector<int>::iterator it;
-	std::vector<int>::iterator it_end = array.end();
+	std::vector<int>::iterator it_end = sortedArray.end();
 	
 	std::sort(sortedArray.begin(), sortedArray.end());  // Sorting the array
 	
