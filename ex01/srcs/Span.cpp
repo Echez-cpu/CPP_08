@@ -57,7 +57,6 @@ int 	Span::shortestSpan() const {
 
 	int min = 	__INT_MAX__;
 	std::vector<int>::iterator it;
-	std::vector<int>::iterator it_end = sortedArray.end();
 	
 	std::sort(sortedArray.begin(), sortedArray.end());  // Sorting the array
 	
