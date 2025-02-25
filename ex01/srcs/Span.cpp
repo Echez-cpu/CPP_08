@@ -27,7 +27,7 @@ void Span::addNumber(int n) {
 }
 
 
-/*void Span::bigSpan(int n) {
+void Span::bigSpan(int n) {
     if (this->actual_size + n > this->input_maxSize) {
         std::cout << "Can't add " << n << " elements to the array, max_size will be surpassed." << std::endl;
         return;
@@ -42,7 +42,7 @@ void Span::addNumber(int n) {
             std::cout << "current size: " << this->actual_size << std::endl << "current randonly generated number" << " : " << nb << std::endl;
         }
     }
-}*/
+}
 
 
 int 	Span::shortestSpan() const {
