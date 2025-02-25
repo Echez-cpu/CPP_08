@@ -46,12 +46,52 @@ void Span::bigSpan(int n) {
 
 
 
+int 	Span::shortestSpan() {
+	
+	if (input_array.size() <  2)
+		throw Span::NotEnoughNumbersException();
+	
+	std::vector<int> sortedArray = input_array;  // Copy array to avoid modifying original data
+
+	
+
+	int min = 	__INT_MAX__;
+	std::vector<int>::iterator it;
+	std::vector<int>::iterator it_end = array.end();
+	
+	std::sort(sortedArray.begin(), sortedArray.end());  // Sorting the array
+	
+	for (it = sortedArray.begin(); it != sortedArray.end() - 1; it++) {  
+		if ((*(it + 1) - *it) < min) {
+			min = (*(it + 1) - *it);
+		}
+	}
+	return min;
+}
 
 
 
 
+int 		Span::longestSpan() const {
+	if (this->input_array.size() < 2)
+		throw Span::NotEnoughNumbersException();
+		
+	int max = *std::max_element(this->input_array.begin(), this->input_array.end());
+	int min = *std::min_element(this->input_array.begin(), this->input_array.end());
+
+	return max - min;
+}
 
 
+
+const char *		Span::MaxNumbersException::what() const throw() {
+	return "Error: Span is full, cannot add more numbers.";
+}
+
+
+const char *	Span::NotEnoughNumbersException::what() const throw() {
+	return "Error: Not enough numbers to calculate span.";
+}
 
 
 
