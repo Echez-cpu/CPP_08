@@ -1,4 +1,5 @@
 #include "../includes/Span.hpp"
+#include <set>
 
 /*int main()
 {
@@ -19,7 +20,6 @@ int main() {
     try {
         Span sp(5);
 
-        // array.bigSpan(10000);        
         sp.addNumber(6);
         sp.addNumber(3);
         sp.addNumber(17);
@@ -60,12 +60,14 @@ int main() {
     std::cout << "\n===== Large Test with 10,000 numbers =====" << std::endl;
     try {
         Span largeSpan(10000);
-        std::vector<int> bigVec;
+        std::set<int> uniqueNumbers;
         std::srand(std::time(NULL));
         
-        for (int i = 0; i < 10000; i++) {
-            bigVec.push_back(std::rand() % 100001);
+        while (uniqueNumbers.size() < 10000) {
+            uniqueNumbers.insert(std::rand() % 100001); // Generate numbers within 0 to 100,000
         }
+        
+        std::vector<int> bigVec(uniqueNumbers.begin(), uniqueNumbers.end());
         
         largeSpan.addRange(bigVec.begin(), bigVec.end());
         std::cout << "Shortest Span: " << largeSpan.shortestSpan() << std::endl;
