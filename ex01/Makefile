@@ -1,4 +1,4 @@
-SRC = ./srcs/main.cpp
+SRC = ./srcs/main.cpp ./srcs/Span.cpp
 NAME = span
 OBJ_DIR = obj
 OBJ = $(patsubst ./srcs/%.cpp, $(OBJ_DIR)/%.o, $(SRC))
