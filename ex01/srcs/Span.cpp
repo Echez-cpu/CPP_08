@@ -39,7 +39,7 @@ void Span::bigSpan(int n) {
         this->addNumber(nb);  // Add number to Span
 
         if (i % 1000 == 0) {
-            std::cout << "current size: " << this->actual_size << std::endl << "current randonly generated number << " : " << nb << std::endl;
+            std::cout << "current size: " << this->actual_size << std::endl << "current randonly generated number" << " : " << nb << std::endl;
         }
     }
 }
