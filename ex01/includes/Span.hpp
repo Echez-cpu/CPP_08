@@ -41,7 +41,7 @@ class Span {
 	private:
 		std::vector<int>	input_array;
 		unsigned int		input_maxSize;
-		unsigned int		input_size;
+		unsigned int		actual_size;
 
 };
 
