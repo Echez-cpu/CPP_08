@@ -31,8 +31,8 @@ int main() {
         sp.addNumber(9);
         sp.addNumber(11);
 
-        std::cout << GREEN << "Shortest Span: " << sp.shortestSpan() << std::endl;
-        std::cout << Y << "Longest Span: " << sp.longestSpan() << std::endl;
+        std::cout << GREEN << "Shortest Span: " << sp.shortestSpan() << RESET << std::endl;
+        std::cout << Y << "Longest Span: " << sp.longestSpan() << RESET << std::endl;
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
     }
@@ -40,7 +40,7 @@ int main() {
     std::cout << "\n===== Exception Tests =====" << std::endl;
     try {
         Span emptySpan(0);
-        std::cout << RED << emptySpan.shortestSpan() << std::endl; // Should throw
+        std::cout << RED << emptySpan.shortestSpan() << RESET << std::endl; // Should throw
     } catch (const std::exception &e) {
         std::cerr << "Expected Exception: " << e.what() << std::endl;
     }
@@ -48,7 +48,7 @@ int main() {
     try {
         Span oneElementSpan(1);
         oneElementSpan.addNumber(42);
-        std::cout << RED << oneElementSpan.longestSpan() << std::endl; // Should throw
+        std::cout << RED << oneElementSpan.longestSpan() << RESET << std::endl; // Should throw
     } catch (const std::exception &e) {
         std::cerr << "Expected Exception: " << e.what() << std::endl;
     }
@@ -59,7 +59,7 @@ int main() {
         fullSpan.addNumber(20);
         fullSpan.addNumber(30); // Should throw
     } catch (const std::exception &e) {
-        std::cerr << RED << "Expected Exception: " << e.what() << std::endl;
+        std::cerr << RED << "Expected Exception: " << e.what() << RESET << std::endl;
     }
     
     std::cout << "\n===== Large Test with 10,000 numbers =====" << std::endl;
@@ -73,8 +73,8 @@ int main() {
         }
         
         largeSpan.addNumber_2(bigVec.begin(), bigVec.end());
-        std::cout << Y << "Shortest Span: " << largeSpan.shortestSpan() << std::endl;
-        std::cout << GREEN << "Longest Span: " << largeSpan.longestSpan() << std::endl;
+        std::cout << Y << "Shortest Span: " << largeSpan.shortestSpan() << RESET << std::endl;
+        std::cout << GREEN << "Longest Span: " << largeSpan.longestSpan() << RESET << std::endl;
     } catch (const std::exception &e) {
         std::cerr << "Unexpected Exception: " << e.what() << std::endl;
     }
