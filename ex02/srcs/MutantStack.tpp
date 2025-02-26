@@ -3,15 +3,15 @@ template<typename T>
 MutantStack<T>::MutantStack() {}
 
 template<typename T>
-MutantStack<T>::MutantStack(const MutantStack<T> &src) : std::stack<T>(src) {}
+MutantStack<T>::MutantStack(const MutantStack<T> &source) : std::stack<T>(source) {}
 
 template<typename T>
 MutantStack<T>::~MutantStack() {}
 
 template<typename T>
-MutantStack<T> &MutantStack<T>::operator=(const MutantStack<T> &rSym) {
+MutantStack<T> &MutantStack<T>::operator=(const MutantStack<T> &original_copy) {
     if (this != &rSym) {
-        std::stack<T>::operator=(rSym);
+        std::stack<T>::operator=(original_copy);
     }
     return *this;
 }
