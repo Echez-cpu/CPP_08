@@ -62,7 +62,7 @@ int main() {
         std::cerr << RED << "Expected Exception: " << e.what() << RESET << std::endl;
     }
     
-    std::cout << "\n===== Large Test with 10,000 numbers =====" << std::endl;
+    std::cout << "\n===== Large Test with 10,000 numbers or more if you like =====" << std::endl;
     try {
         Span largeSpan(10000);
         std::vector<int> bigVec;
