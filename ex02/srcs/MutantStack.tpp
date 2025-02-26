@@ -16,7 +16,7 @@ MutantStack<T> &MutantStack<T>::operator=(const MutantStack<T> &original_copy) {
     return *this;
 }
 
-// ✅ FIX: Properly Access `c` with `this->c`
+
 template<typename T>
 typename MutantStack<T>::iterator MutantStack<T>::begin() {
     return this->c.begin();
