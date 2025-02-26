@@ -30,5 +30,6 @@ public:
     private:
 };
 
+#include "../srcs/MutantStack.tpp"
 
 #endif
