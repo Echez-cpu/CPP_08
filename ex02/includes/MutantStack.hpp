@@ -8,10 +8,10 @@ template<class T>
 class MutantStack : public std::stack<T> {
 public:
     MutantStack();
-    MutantStack(const MutantStack &src);
+    MutantStack(const MutantStack &source);
     ~MutantStack();
 
-    MutantStack<T> &operator=(const MutantStack<T> &rSym);
+    MutantStack<T> &operator=(const MutantStack<T> &original_copy);
 
     typedef typename std::stack<T>::container_type::iterator iterator;
     typedef typename std::stack<T>::container_type::const_iterator const_iterator;
@@ -26,6 +26,8 @@ public:
     reverse_iterator rend();
     const_reverse_iterator rbegin() const;
     const_reverse_iterator rend() const;
+
+    private:
 };
 
 
