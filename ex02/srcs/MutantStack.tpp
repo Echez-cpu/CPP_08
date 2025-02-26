@@ -10,7 +10,7 @@ MutantStack<T>::~MutantStack() {}
 
 template<typename T>
 MutantStack<T> &MutantStack<T>::operator=(const MutantStack<T> &original_copy) {
-    if (this != &rSym) {
+    if (this != &original_copy) {
         std::stack<T>::operator=(original_copy);
     }
     return *this;
